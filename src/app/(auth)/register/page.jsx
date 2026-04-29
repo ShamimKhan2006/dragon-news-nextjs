@@ -55,9 +55,9 @@ const RegisterPage = () =>{
               required: "Name is required",
             })}
           />
-          {errors.email && (
+          {errors.name && (
             <p className="text-red-500 text-sm mt-1">
-              {errors.email.message}
+              {errors.name.message}
             </p>
           )}
         </TextField>
@@ -70,9 +70,9 @@ const RegisterPage = () =>{
               required: "Photo is required",
             })}
           />
-          {errors.email && (
+          {errors.photo && (
             <p className="text-red-500 text-sm mt-1">
-              {errors.email.message}
+              {errors.photo.message}
             </p>
           )}
         </TextField>
