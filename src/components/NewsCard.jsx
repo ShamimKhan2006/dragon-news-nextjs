@@ -1,6 +1,5 @@
 import React from "react";
-import Header from "./Header";
-import Navber from "./Navber";
+
 import Image from "next/image";
 import { IoEyeOutline, IoShareSocialOutline } from "react-icons/io5";
 import { CiBookmarkCheck } from "react-icons/ci";
