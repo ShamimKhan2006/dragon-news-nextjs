@@ -1,6 +1,6 @@
 
             
-import Header from '@/components/Header';
+
 import Leftsidebar from '@/components/homePage/news/Leftsidebar';
 import LoginSec from '@/components/Login-sec';
 import NewsCard from '@/components/NewsCard';
@@ -30,8 +30,7 @@ const NewsDetails =async ({params}) => {
     const {id}=await params ||{}
     const category=await getCetagories()
   const allNews=await getNews(id)
-  console.log("ID:", id)
-console.log("News:", allNews)
+
     
   
     return (
@@ -41,13 +40,13 @@ console.log("News:", allNews)
          <Leftsidebar category={category} activeId={id}></Leftsidebar>
         </div>
         <div className="col-span-6 text-center font-semibold">
-          <h1>All News</h1>
+          <h1 className='mb-5'>All News</h1>
          {
-          allNews?.map(item => 
+          allNews.length>0? allNews?.map(item => 
             <NewsCard key={item._id} item={item}>
             </NewsCard>
-          )
-         }
+          
+           ): <h1 className='mt-40 text-red-500 font-bold text-4xl'>News not found</h1>}
 
         </div>
         <div className="col-span-3 text-center font-semibold">
