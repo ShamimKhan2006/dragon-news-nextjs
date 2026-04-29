@@ -33,7 +33,7 @@ const RegisterPage = () =>{
   alert("Signup Successfull")
  }
  if(error){
-  alert(" this emails is already used plz change your email")
+  alert(" this emails is already used")
  }
   };
 
